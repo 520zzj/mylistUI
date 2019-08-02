@@ -1,0 +1,87 @@
+<template>
+    <div class="test">
+       <div class="box cf">
+           <div class="imgBox">
+               <div class="bgPic">
+                   <img src="../img/69ded6a598_250_350.jpg" alt="">
+               </div>
+           </div>
+           <div class="imgBox">
+           <div class="bgPic">
+                   <img src="../img/69ded6a598_250_350.jpg" alt="">
+               </div></div>
+           <div class="imgBox">
+               
+               <div class="bgPic">
+                   <img src="../img/69ded6a598_250_350.jpg" alt="">
+               </div>
+           </div>
+       </div>
+
+    </div>
+</template>
+<script>
+export default {
+    data(){
+        return{
+
+        }
+    }
+}
+</script>
+<style scoped>
+.box{
+    position: relative;
+}
+.imgBox:not(:first-child){
+     width:40%;
+    padding-top: 30%;
+    float: right;
+    /* margin-left: 3px; */
+    padding-left: 3px;
+    padding-right: 6px;
+}
+.imgBox:first-child{
+    background: red;
+    width: 60%;
+    padding-top: 60%;
+    float: left;
+    /* margin-right:3px; */
+    padding-left:6px;
+    padding-right: 3px;
+}
+.imgBox:nth-child(2){
+    background:green;
+}
+.imgBox:last-child{
+    background: gray;
+}
+.box .imgBox{
+    box-sizing: border-box;
+    /* padding:5px; */
+    /* margin:5px; */
+    overflow: hidden;
+    position: relative;
+}
+.cf::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.bgPic{
+    position: absolute;
+    left:6px;
+    right:3px;
+    top:6px;
+}
+.bgPic img{
+    width:100%;
+    height: auto;
+}
+.imgBox:not(:first-child) .bgPic{
+    left: 3px;
+    right:6px;
+}
+</style>
+
+
